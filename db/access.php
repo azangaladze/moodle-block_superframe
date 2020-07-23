@@ -66,5 +66,17 @@ $capabilities = array(
             'student' => CAP_ALLOW,
             'guest' => CAP_PREVENT
         )
+    ),
+	
+	//Restrict seeing online users.
+	'block/superframe:viewuserslist' => array(
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW,
+            'student' => CAP_PREVENT,
+            'guest' => CAP_PREVENT
+        )
     )
 );

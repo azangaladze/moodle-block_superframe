@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 require('../../config.php');
-$config = get_config('block_superframe');
+global $USER
 $blockid = required_param('blockid', PARAM_INT);
 $def_config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
