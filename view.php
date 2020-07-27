@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 require('../../config.php');
-global $USER
+$config = get_config('block_superframe');
 $blockid = required_param('blockid', PARAM_INT);
 $def_config = get_config('block_superframe');
 $PAGE->set_course($COURSE);
@@ -72,20 +72,5 @@ switch ($config->size) {
         break;
 }
 
-// Start output to browser.
-echo $OUTPUT->header();
-echo $OUTPUT->heading(get_string('pluginname', 'block_superframe'), 5);
-echo $OUTPUT->user_picture($USER);
-echo '<br>' . fullname($USER) . '  <br>';
-
-
-
-// Build and display an iframe.
-$attributes = ['src' => $url,
-               'width' => $width,
-               'height' => $height];
-echo html_writer::start_tag('iframe', $attributes);
-echo html_writer::end_tag('iframe');
-
-// Send footer out to browser.
-echo $OUTPUT->footer();
+$renderer = $PAGE->get_renderer('block_superframe');
+$renderer->display_view_page($url, $width, $height);
