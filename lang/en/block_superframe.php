@@ -32,7 +32,7 @@
 // General.
 $string['pluginname'] = 'Super frame';
 $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
-$string['viewlink'] = 'View page';
+$string['viewlink'] = 'View Page';
 
 // Admin settings file.
 $string['headerconfig'] = 'Super frame settings';
@@ -45,6 +45,14 @@ $string['width'] = 'Width';
 $string['width_details'] = 'Width of the frame (px)';
 $string['pagelayout'] = 'Page layout';
 $string['pagelayout_details'] = 'Select a preferred page layout';
+// popup
+$string['poptext'] = 'View List of Blocks';
+$string['blockid'] = 'Block ID';
+$string['blockname'] = 'Block name';
+$string['course'] = 'Course name';
+$string['catname'] = 'Category name';
+$string['tablecaption'] = 'List of Blocks In Course';
+
 
 // Capability strings.
 $string['superframe:addinstance'] = 'Add a new Super frame block';

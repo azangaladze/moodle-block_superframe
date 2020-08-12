@@ -16,26 +16,35 @@
 }}
 
 {{!
-    @template block_superframe/block
+    @template block_superframe/block_data
 
     This template renders a url in an iframe of given size.
 
     Example context (json):
     {
-        "welcome": "Welcome user",
-        "url": "http://www.moodlebites.com",
-        "linktext": "#"
+       tableheaders: [heading 1, heading 2]
+       tabledata: [ [item1 row 1, item2 row 1], [item1 row2, item2 row2], [...] ]
     }
 }}
-<div>
-    <h3>{{welcome}} {{picture}}</h3> 
-    <a href="{{{url}}}">{{linktext}}</a>
-    <br>
-	<a href={{{popurl}}} target="_blank"> {{poptext}}
-	<br><br>
-    {{#students}}
-      <ul class="list-group">
-        <li class="list-group-item list-group-item-success">  {{{pic}}} {{name}}</li>
-    </ul>
-    {{/students}}
+<div class = "table-responsive">
+    <table class = "table table-striped table-hover">
+        {{! Using a get_string helper }}
+        <caption>
+            {{# str }} tablecaption, block_superframe {{/ str }}
+        </caption>
+        <thead>
+            {{#tableheaders}}
+                <th>{{.}}</th>
+            {{/tableheaders}}
+        </thead>
+        <tbody>
+            {{#tabledata}}
+                <tr>
+                    {{#.}}
+                        <td>{{.}}</td>
+                    {{/.}}
+                </tr>
+            {{/tabledata}}
+        </tbody>
+    </table>
 </div>
