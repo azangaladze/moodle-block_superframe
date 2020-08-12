@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -30,12 +29,12 @@
  * See: https://www.moodlebites.com/mod/page/view.php?id=24546
  */
 
-// General
+// General.
 $string['pluginname'] = 'Super frame';
 $string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
-$string['viewlink'] = 'Veiw Page';
+$string['viewlink'] = 'View page';
 
-//admin settings
+// Admin settings file.
 $string['headerconfig'] = 'Super frame settings';
 $string['headerconfigdesc'] = 'Settings for Super frame';
 $string['url'] = 'iFrame URL';
@@ -44,16 +43,14 @@ $string['height'] = 'Height';
 $string['height_details'] = 'Height of the frame (px)';
 $string['width'] = 'Width';
 $string['width_details'] = 'Width of the frame (px)';
-$string['page_layout'] = 'Page layout';
-$string['page_layout_details'] = 'Select a preferred page layout';
+$string['pagelayout'] = 'Page layout';
+$string['pagelayout_details'] = 'Select a preferred page layout';
 
-
-
-// Capability strings
+// Capability strings.
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
 $string['superframe:seeviewpage'] = 'Access the view page';
-$string['superframe:viewuserslist'] = 'View online users list';
+$string['superframe:seeuserlist'] = 'View the user list in the block';
 
 // Edit form strings.
 $string['size'] = 'Select a size for your iframe';
@@ -61,3 +58,7 @@ $string['custom'] = 'Custom';
 $string['small'] = 'Small';
 $string['medium'] = 'Medium';
 $string['large'] = 'Large';
+
+// Modest statement.
+$string['message'] = 'I am a great developer';
+$string['picture'] = 'Show picture';

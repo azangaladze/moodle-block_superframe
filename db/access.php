@@ -33,7 +33,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
-    //User can add to Dashboard.
+    // User can add to Dashboard.
     'block/superframe:myaddinstance' => array(
         'captype' => 'write',
         'contextlevel' => CONTEXT_SYSTEM,
@@ -56,7 +56,7 @@ $capabilities = array(
 
         'clonepermissionsfrom' => 'moodle/site:manageblocks'
     ),
-	 // Restrict access to view page.
+     // Restrict access to view page.
     'block/superframe:seeviewpage' => array(
         'captype' => 'read',
         'contextlevel' => CONTEXT_COURSE,
@@ -67,11 +67,10 @@ $capabilities = array(
             'guest' => CAP_PREVENT
         )
     ),
-	
-	//Restrict seeing online users.
-	'block/superframe:viewuserslist' => array(
+    // Restrict access to user list.
+    'block/superframe:seeuserlist' => array(
         'captype' => 'read',
-        'contextlevel' => CONTEXT_SYSTEM,
+        'contextlevel' => CONTEXT_BLOCK,
         'archetypes' => array(
             'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW,

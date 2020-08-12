@@ -14,16 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * superframe settings page
+ * superframe admin settings page
  *
  * @package    block_superframe
  * @copyright  Daniel Neis <danielneis@gmail.com>
  * Modified for use in MoodleBites for Developers Level 1 by Richard Jones & Justin Hunt
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
- defined('MOODLE_INTERNAL') || die();
- 
- // Our default values.
+defined('MOODLE_INTERNAL') || die();
+
+// Our default values.
 $defaulturl = 'https://quizlet.com/132695231/scatter/embed';
 $defaultheight = '400';
 $defaultwidth = '600';
@@ -39,26 +39,25 @@ if ($ADMIN->fulltree) {
             get_string('url', 'block_superframe'),
             get_string('url_details', 'block_superframe'),
             $defaulturl, PARAM_RAW));
-			
-	// height change
-	$settings->add(new admin_setting_configtext('block_superframe/height',
+
+    // The iframe height and width.
+    $settings->add(new admin_setting_configtext('block_superframe/height',
             get_string('height', 'block_superframe'),
             get_string('height_details', 'block_superframe'),
             $defaultheight, PARAM_INT));
-	
-	// width change		
-	$settings->add(new admin_setting_configtext('block_superframe/width',
+
+    $settings->add(new admin_setting_configtext('block_superframe/width',
             get_string('width', 'block_superframe'),
             get_string('width_details', 'block_superframe'),
             $defaultwidth, PARAM_INT));
-			
-	//page layout dropdown
+
+    // The page layour options.
     $options = array();
-	$options['course'] = get_string('course');
-	$options['popup'] = get_string('popup'); 
-	
-    $settings->add(new admin_setting_configselect('block_superframe/page_layout', 
-            get_string('page_layout', 'block_superframe'),
-			get_string('page_layout_details', 'block_superframe'), 'course',
+    $options['course'] = get_string('course');
+    $options['popup'] = get_string('popup');
+
+    $settings->add(new admin_setting_configselect('block_superframe/pagelayout',
+            get_string('pagelayout', 'block_superframe'),
+            get_string('pagelayout_details', 'block_superframe'),'course',
             $options));
 }
