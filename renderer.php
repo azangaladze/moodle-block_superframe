@@ -67,6 +67,8 @@ class block_superframe_renderer extends plugin_renderer_base {
 	   // Add a link to the popup page:
         $data->popurl = new moodle_url('/blocks/superframe/block_data.php');
         $data->poptext = get_string('poptext', 'block_superframe');
+		$data->tableurl = new moodle_url('/blocks/superframe/tablemanager.php');
+        $data->tabletext = get_string('tabletext', 'block_superframe');
 		
         return $this->render_from_template('block_superframe/block', $data);
     }

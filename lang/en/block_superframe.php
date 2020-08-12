@@ -52,7 +52,7 @@ $string['blockname'] = 'Block name';
 $string['course'] = 'Course name';
 $string['catname'] = 'Category name';
 $string['tablecaption'] = 'List of Blocks In Course';
-
+$string['tabletext'] =  'Table Manager';
 
 // Capability strings.
 $string['superframe:addinstance'] = 'Add a new Super frame block';
