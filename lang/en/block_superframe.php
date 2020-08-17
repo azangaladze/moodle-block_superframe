@@ -54,6 +54,8 @@ $string['catname'] = 'Category name';
 $string['tablecaption'] = 'List of Blocks In Course';
 $string['tabletext'] =  'Table Manager';
 
+$string['returncourse'] = 'Back to course';
+
 // Capability strings.
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
