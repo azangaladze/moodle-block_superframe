@@ -80,3 +80,6 @@ $string['custom'] = 'custom';
 $string['small'] = 'small';
 $string['medium'] = 'medium';
 $string['large'] = 'large';
+
+// Navigation API.
+$string['userlink'] = 'Installed blocks';
