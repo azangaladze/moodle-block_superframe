@@ -56,6 +56,7 @@ $string['tabletext'] =  'Table Manager';
 
 $string['returncourse'] = 'Back to course';
 
+
 // Capability strings.
 $string['superframe:addinstance'] = 'Add a new Super frame block';
 $string['superframe:myaddinstance'] = 'Add a new Super frame block to my moodle';
@@ -72,3 +73,10 @@ $string['large'] = 'Large';
 // Modest statement.
 $string['message'] = 'I am a great developer';
 $string['picture'] = 'Show picture';
+
+//selecting size
+$string['size'] = 'Select a size for your iframe';
+$string['custom'] = 'custom';
+$string['small'] = 'small';
+$string['medium'] = 'medium';
+$string['large'] = 'large';
