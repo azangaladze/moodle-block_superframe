@@ -28,7 +28,7 @@ class block_superframe_renderer extends plugin_renderer_base {
     global $USER;
 
     $data = new stdClass();
-
+  $this->page->requires->js_call_amd('block_superframe/amd_modal', 'init');
     // Page heading and iframe data.
     $data->heading = get_string('pluginname', 'block_superframe');
     $data->url = $url;
@@ -57,6 +57,9 @@ class block_superframe_renderer extends plugin_renderer_base {
 
         $data->linkdata = $links;
 
+      // Link to the AMD modal.
+        $data->modallinktext = get_string('about', 'block_superframe');
+
     // Start output to browser.
     echo $this->output->header();
 
@@ -80,12 +83,15 @@ class block_superframe_renderer extends plugin_renderer_base {
             $data->students[] = $studentlist;
         }
 
-        $username = fullname($USER);
-        $data->welcome = get_string('welcomeuser', 'block_superframe', $USER);
-        $data->url = new moodle_url('/blocks/superframe/view.php', ['blockid' => $blockid, 
-		'courseid' => $courseid]);
-        $data->linktext = get_string('viewlink', 'block_superframe');
+       $name = $USER->firstname . ' ' . $USER->lastname;
+       $this->page->requires->js_call_amd('block_superframe/test_amd', 'init', ['name' => $name]);
+       $data->headingclass = 'block_superframe_heading';
+       $data->welcome = get_string('welcomeuser', 'block_superframe', $name);
        
+	    $data->url = new moodle_url('/blocks/superframe/view.php',
+                ['blockid' => $blockid, 'courseid' => $courseid]);
+        $data->linktext = get_string('viewlink', 'block_superframe');
+	   
 	   // Add a link to the popup page:
         $data->popurl = new moodle_url('/blocks/superframe/block_data.php');
         $data->poptext = get_string('poptext', 'block_superframe');

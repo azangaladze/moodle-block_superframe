@@ -27,13 +27,15 @@
         "linktext": "#"
     }
 }}
+
 <div>
-    <h3>{{welcome}} {{picture}}</h3> 
-    <a href="{{{url}}}">{{linktext}}</a>
-    <br>
-	<a href={{{popurl}}} target="_blank"> {{poptext}}
-	<br>
-	<a href={{{tableurl}}} target="_blank"> {{tabletext}}
+  <h3 class="{{headingclass}}">{{welcome}}</h3>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="{{{url}}}">{{linktext}}</a></li>
+      <li class="nav-item"><a href="{{{popurl}}}">{{poptext}}</a></li>
+      <li class="nav-item"><a href="{{{tableurl}}}">{{tabletext}}</a></li>
+    </ul>
+
 	<br><br>
     {{#students}}
       <ul class="list-group">

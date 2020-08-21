@@ -31,7 +31,7 @@
 
 // General.
 $string['pluginname'] = 'Super frame';
-$string['welcomeuser'] = 'Welcome {$a->firstname} {$a->lastname}';
+$string['welcomeuser'] = 'Welcome {$a}';
 $string['viewlink'] = 'View Page';
 
 // Admin settings file.
@@ -74,6 +74,8 @@ $string['large'] = 'Large';
 $string['message'] = 'I am a great developer';
 $string['picture'] = 'Show picture';
 
+
+
 //selecting size
 $string['size'] = 'Select a size for your iframe';
 $string['custom'] = 'custom';
@@ -83,3 +85,5 @@ $string['large'] = 'large';
 
 // Navigation API.
 $string['userlink'] = 'Installed blocks';
+
+$string['about'] = 'About Superframee';
